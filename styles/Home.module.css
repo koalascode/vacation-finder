@@ -1,116 +1,239 @@
-.container {
-  padding: 0 2rem;
+
+.tempcolorchanger {
+  background-color: rgb(34, 112, 190);
+  border: none;
+  color: white;
+  border-radius: 14px;
+  height: 1.5rem;
+  transform: translate(1rem, 1rem);
+
+  transition: opacity 500ms ease;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.tempcolorchanger:hover {
+  opacity: 90%;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.header {
   text-align: center;
+  font-family: "lato";
+  padding-bottom: 2rem;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.introductioncontainer {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  justify-content: space-evenly;
+}
+
+.introductionbutton {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border: none; 
+  border-radius: 10px;
+  width: 6rem;
+  height: 1.75rem
+}
+
+.introductionheader {
+  max-width: 28ch;
+}
+
+.introductionmain {
+  max-width: 55ch;
+}
+
+.introductionbutton{animation: 2.5s ease-in 0s FadeIn;}
+@keyframes FadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+  .card {
+    background-color: #f8f6f6 !important;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .introductioncontainer {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .introductionbutton {
+    margin-bottom: 1rem;
+  }
+
+  .header {
+    padding-bottom: .75rem;
+  }
+
+  .card {
+    width: 90% !important;
+    margin: 1rem
+  }
+}
+
+.cardcontainer {
+  display: none;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
 }
 
 .card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  width: 45%;
+  background-color: rgb(35, 34, 34);
+  border-radius: 15px;
+  cursor: pointer;
+
+  transition: all 500ms;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.card:hover {
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.cardheader {
+  position: relative;
+  text-align: center;
+  z-index: 99;
 }
 
-.card p {
+.cardinstruction {
+  text-align: center;
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  margin-top: -.5rem;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.secondcardscontainer {
+  display: none;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.image {
+  border-radius: 15px;
+  /*Find a way to center the image horizontally*/
+}
+
+
+
+.navigationcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  margin-top: 2rem;
+  transform: translateX(-1rem);
+  padding-bottom: 1rem;
+}
+
+.navigationpanel {
+  font-size: 5rem;
+}
+
+.navigationbutton {
+  border: none;
+  border-radius: 10px;
+  width: 7.5rem;
+  height: 1.75rem
+}
+
+.showresultsbutton {
+  border: none;
+  border-radius: 10px;
+  width: 8rem;
+  height: 1.75rem;
+  text-align: center;
+  display: none;
+}
+
+.traveltimeform {
+  margin: 1rem;
+}
+
+.submitbutton {
+  margin: 1rem;
+  border: none;
+  border-radius: 10px;
+  width: 7.5rem;
+  height: 1.75rem;
+
+}
+
+.photoformcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.formimage {
+  border-radius: 15px;
+  padding: 1rem;
+  /*Find a way to center the image horizontally*/
+}
+
+.label {
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+.lable, .formimage {
+  height: 100px;
+  width: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + .label {
+  border-color: #ddd;
+}
+
+:checked + .label:before {
+  content: "✅";
+  transform: scale(1);
+}
+
+:checked + .label img {
+  transform: scale(0.93);
+  z-index: -1;
+}
+
+.checkboxnone {
+  display: none;
 }

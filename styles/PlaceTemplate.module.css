@@ -1,0 +1,172 @@
+.container {
+
+}
+
+.sectiononeflex {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.sectiononeheader {
+    font-family: "Lato";
+    font-size: 2.5rem;
+    border-left-style: solid;
+    border-left-color: #61f92a;
+    border-left-width: 1.5px;
+    padding: .75rem;
+}
+
+.sectiononemain {
+    max-width: 50ch;
+    line-height: 1.6rem;
+}
+
+.sectiontwo {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 95%;
+    margin: 0 auto;  
+}
+
+.sectiontwoheader {
+    font-family: "Lato";
+    border-left-style: solid;
+    border-left-color: rgb(97, 249, 42);
+    border-left-width: 1.5px;
+    padding: 0.5rem;
+    line-height: 2.8rem;
+    max-width: 10ch;
+}
+
+.card {
+    background-color: rgb(35, 34, 34);
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+@media (prefers-color-scheme: light) {
+    .card {
+      background-color: #f8f6f6 !important;
+    }
+    .sectiononeheader,
+    .sectiontwoheader {
+        border-left-color: #14b6de !important;
+    }
+  }
+
+.cardtext {
+    text-align: center;
+}
+
+
+/* Contains all the images: */
+.image {
+    border-radius: 15px;
+}
+
+
+.guideheader {
+    text-align: center;
+}
+
+.guidep {
+    text-align: center;
+    font-family: "Open Sans";
+    margin-top: -.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sectionthreeflexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+
+.individualdayactivities {
+    max-width: 50ch;
+}
+
+
+
+.photogalleryheader {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.photocontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    gap: 2rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.imagecontainer {
+    border-radius: 15px; 
+    max-width: 60%;
+    max-height: 40rem;
+}
+
+.photochangebutton {
+    border: none;
+    border-radius: 10px;
+    /*background: none;*/
+    
+    margin: auto 0;
+    display: block;
+}
+
+.buttontext {
+    font-size: 2.5rem;
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .photocontainer {
+        gap: 0rem;
+    }
+
+    .sectiontwoheader {
+        border: none;
+        max-width: 30ch;
+        border-bottom-style: solid;
+        border-bottom-color: #61f92a;
+        border-bottom-width: 1.5px;
+    }
+
+    .imagecontainer {
+        max-width: 100%;
+        position: relative;
+        margin: -5rem;
+        margin-top: 0;
+    }
+
+    .photochangebutton {
+        z-index: 99 !important;
+        transform: translateY(2rem);
+        padding: -2rem;
+        background: none;
+    }
+
+    #right {
+        margin-right: 2rem !important;
+    }
+
+    .buttontext {
+        font-size: 1.35rem;
+    }
+}
